@@ -1,0 +1,13 @@
+window.onload = () => {
+  let art = document.querySelectorAll('article.post.type-post');
+
+  for(let i=0; i<art.length; i++){
+  //    console.log(art[i].children[1].children[0].children[0]);
+  //    console.log(art[i].children[0].children[0].children[1].children[0].href);
+      let link = art[i].children[0].children[0].children[1].children[0].href;
+      let div = art[i].children[1].children[0].children[0];
+      div.onclick = () => {
+          location.href = link;
+      }
+  }
+}
